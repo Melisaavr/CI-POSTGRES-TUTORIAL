@@ -7,18 +7,19 @@ connection = psycopg2.connect(database="chinook")
 # build a cursor object of the database
 cursor = connection.cursor()
 
-# Query 1 - select all records from the "artist" table
+# Query 1 - select all records from the "Artist" table
 cursor.execute('SELECT * FROM "artist"')
 
+
 # fetch the results (multiple)
+results = cursor.fetchall()
+
+# fetch the result (single)
 # results = cursor.fetchone()
 
-# close the connection 
+# close the connection
 connection.close()
 
 # print results
-for result in results: 
+for result in results:
     print(result)
-
-
-

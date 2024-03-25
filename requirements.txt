@@ -1,0 +1,4 @@
+greenlet==3.0.3
+psycopg2==2.9.9
+# SQLAlchemy==1.4.46
+sqlalchemy<2.0
